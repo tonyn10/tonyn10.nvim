@@ -1,4 +1,4 @@
-# kickstart-modular.nvim
+# tonyn10.nvim
 
 ## Introduction
 
