@@ -55,11 +55,17 @@ return {
         -- You can put your default mappings / updates / etc. in here
         --  All the info you're looking for is in `:help telescope.setup()`
         --
-        -- defaults = {
-        --   mappings = {
-        --     i = { ['<c-enter>'] = 'to_fuzzy_refine' },
-        --   },
-        -- },
+        defaults = {
+          mappings = {
+            --i = { ['<c-enter>'] = 'to_fuzzy_refine' },
+            n = {
+              ["kj"] = require('telescope.actions').close,
+            },
+            i = {
+              ["kj"] = require('telescope.actions').close,
+            },
+          },
+        },
         -- pickers = {}
         extensions = {
           ['ui-select'] = {
@@ -107,6 +113,15 @@ return {
       vim.keymap.set('n', '<leader>sn', function()
         builtin.find_files { cwd = vim.fn.stdpath 'config' }
       end, { desc = '[S]earch [N]eovim files' })
+
+      -- ** Make Telescope background transparent or match Normal **
+      vim.api.nvim_set_hl(0, "TelescopeNormal",       { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "TelescopePromptNormal", { bg = "NONE" })
+      vim.api.nvim_set_hl(0, "TelescopeResultsNormal",{ bg = "NONE" })
+      vim.api.nvim_set_hl(0, "TelescopePreviewNormal",{ bg = "NONE" })
+      vim.api.nvim_set_hl(0, "TelescopeBorder",       { bg = "NONE", fg = "NONE" })
+      vim.api.nvim_set_hl(0, "TelescopePromptBorder", { bg = "NONE", fg = "NONE" })
+      vim.api.nvim_set_hl(0, "TelescopePromptTitle",  { bg = "NONE", fg = "NONE" })
     end,
   },
 }

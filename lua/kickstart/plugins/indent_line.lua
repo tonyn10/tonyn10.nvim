@@ -4,6 +4,12 @@ return {
     -- Enable `lukas-reineke/indent-blankline.nvim`
     -- See `:help ibl`
     main = 'ibl',
-    opts = {},
+    opts = {
+      scope = {
+        highlight = {"Comment"},
+        show_start = true,
+        show_end = true,
+      },
+    },
   },
 }
