@@ -65,8 +65,9 @@ return {
               ["kj"] = require('telescope.actions').close,
             },
           },
+
+          file_ignore_patterns = { "%.class$", "bin/", "target/" },
         },
-        -- pickers = {}
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
@@ -115,13 +116,13 @@ return {
       end, { desc = '[S]earch [N]eovim files' })
 
       -- ** Make Telescope background transparent or match Normal **
-      vim.api.nvim_set_hl(0, "TelescopeNormal",       { bg = "NONE" })
-      vim.api.nvim_set_hl(0, "TelescopePromptNormal", { bg = "NONE" })
-      vim.api.nvim_set_hl(0, "TelescopeResultsNormal",{ bg = "NONE" })
-      vim.api.nvim_set_hl(0, "TelescopePreviewNormal",{ bg = "NONE" })
-      vim.api.nvim_set_hl(0, "TelescopeBorder",       { bg = "NONE", fg = "NONE" })
-      vim.api.nvim_set_hl(0, "TelescopePromptBorder", { bg = "NONE", fg = "NONE" })
-      vim.api.nvim_set_hl(0, "TelescopePromptTitle",  { bg = "NONE", fg = "NONE" })
+      -- vim.api.nvim_set_hl(0, "TelescopeNormal",       { bg = "NONE" })
+      -- vim.api.nvim_set_hl(0, "TelescopePromptNormal", { bg = "NONE" })
+      -- vim.api.nvim_set_hl(0, "TelescopeResultsNormal",{ bg = "NONE" })
+      -- vim.api.nvim_set_hl(0, "TelescopePreviewNormal",{ bg = "NONE" })
+      -- vim.api.nvim_set_hl(0, "TelescopeBorder",       { bg = "NONE", fg = "NONE" })
+      -- vim.api.nvim_set_hl(0, "TelescopePromptBorder", { bg = "NONE", fg = "NONE" })
+      -- vim.api.nvim_set_hl(0, "TelescopePromptTitle",  { bg = "NONE", fg = "NONE" })
     end,
   },
 }

@@ -5,11 +5,11 @@ return {
     -- See `:help ibl`
     main = 'ibl',
     opts = {
-      scope = {
-        highlight = {"Comment"},
-        show_start = true,
-        show_end = true,
-      },
+      -- scope = {
+      --   highlight = {"Comment"},
+      --   show_start = true,
+      --   show_end = true,
+      -- },
     },
   },
 }
